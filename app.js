@@ -798,6 +798,7 @@
       const answer = Number(b.dataset.answer),
         q = QUIZ[quizIndex];
       if (answer === q.answer) quizScore++;
+      $(".game-top span:last-child").textContent = `${t("score")}: ${quizScore}`;
       document.querySelectorAll("[data-answer]").forEach((button) => {
         button.disabled = true;
         button.classList.toggle(
